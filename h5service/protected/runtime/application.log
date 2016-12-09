@@ -1,0 +1,513 @@
+2016/12/08 17:15:33 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "map/index".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:875
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(779): CController->renderPartial('map/index', NULL, true)
+#1 /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/SiteController.php(32): CController->render('map/index')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('')
+#7 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('')
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#9 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#10 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/
+2016/12/08 17:26:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "B7.png".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:477
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(262): CController->missingAction('B7.png')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('B7.png')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/B7.png')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/B7.png
+2016/12/08 17:26:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "B7.png".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:477
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(262): CController->missingAction('B7.png')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('B7.png')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/B7.png')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/B7.png
+2016/12/08 17:27:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "B7.png".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:477
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(262): CController->missingAction('B7.png')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('B7.png')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/B7.png')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/B7.png
+2016/12/08 17:27:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:477
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(262): CController->missingAction('css')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('css')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/css/B7.png')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/css/B7.png
+2016/12/08 17:30:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "jquery.min.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:477
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(262): CController->missingAction('jquery.min.js')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('jquery.min.js')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/jquery.min....')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/jquery.min.js
+2016/12/08 17:30:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pinchzoom.min.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:477
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(262): CController->missingAction('pinchzoom.min.j...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('pinchzoom.min.j...')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/pinchzoom.m...')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/pinchzoom.min.js
+2016/12/08 20:02:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tsia_fast_c_nine".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:477
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(262): CController->missingAction('tsia_fast_c_nin...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('tsia_fast_c_nin...')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/tsia_fast_c...')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/tsia_fast_c_nine/h5service/css/left.png
+2016/12/08 20:03:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "tsia_fast_c_nine".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:477
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(262): CController->missingAction('tsia_fast_c_nin...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('tsia_fast_c_nin...')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/tsia_fast_c...')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/tsia_fast_c_nine/h5service/css/left.png
+2016/12/09 16:03:44 [error] [php] Undefined variable: seat (/home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/views/map/index.php:29)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(866): MapController->renderFile()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(779): MapController->renderPartial()
+#2 /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(7): MapController->render()
+#3 unknown(0): MapController->actionIndex()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs()
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams()
+#7 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#12 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/index
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/views/map/index.php (29)
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (7)
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/09 16:03:59 [error] [php] Array to string conversion (/home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/views/map/index.php:29)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(866): MapController->renderFile()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(779): MapController->renderPartial()
+#2 /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(7): MapController->render()
+#3 unknown(0): MapController->actionIndex()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs()
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams()
+#7 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#12 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/index
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/views/map/index.php (29)
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (7)
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/09 16:04:00 [error] [php] Array to string conversion (/home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/views/map/index.php:29)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(866): MapController->renderFile()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(779): MapController->renderPartial()
+#2 /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(7): MapController->render()
+#3 unknown(0): MapController->actionIndex()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs()
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams()
+#7 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#12 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/index
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/views/map/index.php (29)
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (7)
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/09 22:46:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "gii".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('gii')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/gii
+2016/12/09 23:48:03 [error] [exception.CException] exception 'CException' with message 'Property "User.seartPart" is not defined.' in /usr/local/yii/yii-1.1.7.r3135/framework/base/CComponent.php:131
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/db/ar/CActiveRecord.php(128): CComponent->__get('seartPart')
+#1 /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/models/SeatModel.php(45): CActiveRecord->__get('seartPart')
+#2 /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(7): SeatModel->getSeatId('1001')
+#3 [internal function]: MapController->actionIndex('1001')
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(MapController), Array)
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(MapController), Object(ReflectionMethod), Array)
+#6 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#7 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('index')
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/index')
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#12 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/index
+2016/12/10 00:24:52 [error] [php] Undefined variable: code (/home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/views/map/error.php:8)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(866): MapController->renderFile()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(779): MapController->renderPartial()
+#2 /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(10): MapController->render()
+#3 unknown(0): MapController->actionIndex()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs()
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams()
+#7 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#12 /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/tsia_fast_c_nine/h5service/index.php/map/index?id=1222
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/views/map/error.php (8)
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (10)
+in /home/liyan/work/mis/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 01:26:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getUserInfo".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php:477
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(262): CController->missingAction('getUserInfo')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('getUserInfo')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/getUserInfo')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/h5service/map/getUserInfo
+2016/12/10 02:00:49 [error] [php] Undefined index: id (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php:18)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#5 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/getUserInfo
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 02:00:56 [error] [php] Undefined index: id (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php:18)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#5 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/getUserInfo
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 02:01:28 [error] [php] Undefined index: id (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php:18)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#5 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/getUserInfo
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 02:01:34 [error] [php] Undefined index: id (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php:18)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#5 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/getUserInfo
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 02:01:37 [error] [php] Undefined index: id (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php:18)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#5 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/getUserInfo
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 02:01:39 [error] [php] Undefined index: id (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php:18)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#5 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/getUserInfo
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 02:01:48 [error] [php] Undefined index: id (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php:18)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#5 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/getUserInfo
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 02:09:03 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'. The SQL statement executed was: SELECT * FROM `_User` `t` WHERE seatPart=A and seatId = 23 LIMIT 1.
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/models/SeatModel.php (57)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 02:09:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'A' in 'where clause'. The SQL statement executed was: SELECT * FROM `_User` `t` WHERE seatPart=A and seatId = 23 LIMIT 1' in /usr/local/yii/yii-1.1.7.r3135/framework/db/CDbCommand.php:518
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/db/CDbCommand.php(395): CDbCommand->queryInternal('fetch', Array, Array)
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/db/ar/CActiveRecord.php(1256): CDbCommand->queryRow()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/db/ar/CActiveRecord.php(1366): CActiveRecord->query(Object(CDbCriteria))
+#3 /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/models/SeatModel.php(57): CActiveRecord->find(Array)
+#4 /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(18): SeatModel->getUserInfo('A23')
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(50): MapController->actionGetUserInfo()
+#6 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#7 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('getUserInfo')
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/getUserInfo')
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#12 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#13 {main} REQUEST_URI=/h5service/map/getUserInfo?id=A23
+2016/12/10 02:11:49 [error] [php] Undefined index: id (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php:18)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#5 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/getUserInfo
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 02:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip/pro...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip/prototip.js
+2016/12/10 02:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip/pro...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip/prototip.js
+2016/12/10 02:34:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip/pro...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip/prototip.js
+2016/12/10 02:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip/pro...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip/prototip.js
+2016/12/10 02:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:34:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:34:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip.js')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip.js
+2016/12/10 02:34:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip.js')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip.js
+2016/12/10 02:34:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip.js')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip.js
+2016/12/10 02:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip.js')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip.js
+2016/12/10 02:34:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip.js')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip.js
+2016/12/10 02:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/prototip.js".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('js/prototip.js')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/js/prototip.js
+2016/12/10 02:34:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:35:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:35:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/prototip.css".' in /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('css/prototip.cs...')
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/h5service/css/prototip.css
+2016/12/10 02:41:07 [error] [php] Undefined index: id (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php:18)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#5 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/getUserInfo
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (18)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 03:28:50 [error] [exception.CException] exception 'CException' with message 'Property "SeatModel.seat" is not defined.' in /usr/local/yii/yii-1.1.7.r3135/framework/base/CComponent.php:131
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/db/ar/CActiveRecord.php(128): CComponent->__get('seat')
+#1 /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/views/map/index.php(113): CActiveRecord->__get('seat')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CBaseController.php(119): require('/home/liyan/wor...')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CBaseController.php(88): CBaseController->renderInternal('/home/liyan/wor...', Array, true)
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(866): CBaseController->renderFile('/home/liyan/wor...', Array, true)
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(779): CController->renderPartial('index', Array, true)
+#6 /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(13): CController->render('index', Array)
+#7 [internal function]: MapController->actionIndex('1001')
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(MapController), Array)
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(MapController), Object(ReflectionMethod), Array)
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#12 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('index')
+#14 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/index')
+#15 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#16 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/h5service/map/index
+2016/12/10 03:39:15 [error] [php] Undefined variable: key (/home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/views/map/index.php:114)
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(866): MapController->renderFile()
+#1 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(779): MapController->renderPartial()
+#2 /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(13): MapController->render()
+#3 unknown(0): MapController->actionIndex()
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs()
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams()
+#7 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): MapController->runAction()
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): MapController->runActionWithFilters()
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): MapController->run()
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController()
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#12 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CWebApplication->run()
+REQUEST_URI=/h5service/map/index
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/views/map/index.php (114)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php (13)
+in /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php (13)
+2016/12/10 03:45:34 [error] [exception.CException] exception 'CException' with message 'Property "SeatModel.my" is not defined.' in /usr/local/yii/yii-1.1.7.r3135/framework/base/CComponent.php:131
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/db/ar/CActiveRecord.php(128): CComponent->__get('my')
+#1 /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/views/map/index.php(183): CActiveRecord->__get('my')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CBaseController.php(119): require('/home/liyan/wor...')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CBaseController.php(88): CBaseController->renderInternal('/home/liyan/wor...', Array, true)
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(866): CBaseController->renderFile('/home/liyan/wor...', Array, true)
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(779): CController->renderPartial('index', Array, true)
+#6 /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(13): CController->render('index', Array)
+#7 [internal function]: MapController->actionIndex('1001')
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(MapController), Array)
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(MapController), Object(ReflectionMethod), Array)
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#12 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('index')
+#14 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/index')
+#15 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#16 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/h5service/map/index
+2016/12/10 03:46:26 [error] [exception.CException] exception 'CException' with message 'Property "SeatModel.my" is not defined.' in /usr/local/yii/yii-1.1.7.r3135/framework/base/CComponent.php:131
+Stack trace:
+#0 /usr/local/yii/yii-1.1.7.r3135/framework/db/ar/CActiveRecord.php(128): CComponent->__get('my')
+#1 /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/views/map/index.php(183): CActiveRecord->__get('my')
+#2 /usr/local/yii/yii-1.1.7.r3135/framework/web/CBaseController.php(119): require('/home/liyan/wor...')
+#3 /usr/local/yii/yii-1.1.7.r3135/framework/web/CBaseController.php(88): CBaseController->renderInternal('/home/liyan/wor...', Array, true)
+#4 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(866): CBaseController->renderFile('/home/liyan/wor...', Array, true)
+#5 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(779): CController->renderPartial('index', Array, true)
+#6 /home/liyan/work/bost/tsia_fast_c_nine/h5service/protected/controllers/MapController.php(20): CController->render('index', Array)
+#7 [internal function]: MapController->actionIndex('1001')
+#8 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(MapController), Array)
+#9 /usr/local/yii/yii-1.1.7.r3135/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(MapController), Object(ReflectionMethod), Array)
+#10 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#11 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(278): CController->runAction(Object(CInlineAction))
+#12 /usr/local/yii/yii-1.1.7.r3135/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(328): CController->run('index')
+#14 /usr/local/yii/yii-1.1.7.r3135/framework/web/CWebApplication.php(121): CWebApplication->runController('map/index')
+#15 /usr/local/yii/yii-1.1.7.r3135/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#16 /home/liyan/work/bost/tsia_fast_c_nine/h5service/index.php(13): CApplication->run()
+#17 {main} REQUEST_URI=/h5service/map/index
