@@ -50,7 +50,7 @@ class DatabaseProcessor {
     boolean insert(String key) {
         try {
             String sql = String.format(
-                    "insert into hot_select (key, create_time, dt, hr) values ('%s', %s, %s, %s)",
+                    "insert into hot_select (`key`, create_time, dt, hr) values ('%s', %s, %s, %s)",
                     key,
                     Utils.now(),
                     Utils.getDt(),

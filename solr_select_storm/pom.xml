@@ -8,7 +8,7 @@
     <!-- 手动删除掉了.m2中的所有库，这里进行了一次reimport -->
     <groupId>com.domob.aow</groupId>
     <artifactId>hot_select_topology</artifactId>
-    <version>__BUILD_VERSION__</version>
+    <version>0.0.1</version>
     <packaging>jar</packaging>
 
     <name>hot_select_topology</name>

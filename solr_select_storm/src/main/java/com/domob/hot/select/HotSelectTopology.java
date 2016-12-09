@@ -2,6 +2,7 @@ package com.domob.hot.select;
 
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
+import backtype.storm.StormSubmitter;
 import backtype.storm.spout.SchemeAsMultiScheme;
 import backtype.storm.topology.TopologyBuilder;
 import com.domob.hot.select.bolts.decoder.DecoderBolt;
@@ -81,9 +82,9 @@ public class HotSelectTopology {
 
         // 这里启动了新的进程来执行拓扑
         stormConf.put(Config.TOPOLOGY_MAX_SPOUT_PENDING, config.getInt("spout.max.pending"));
-        // StormSubmitter.submitTopology(config.getString("topology.name"), stormConf, builder.createTopology());
-        LocalCluster cluster = new LocalCluster();
-        cluster.submitTopology(config.getString("topology.name"), stormConf, builder.createTopology());
+        StormSubmitter.submitTopology(config.getString("topology.name"), stormConf, builder.createTopology());
+        //LocalCluster cluster = new LocalCluster();
+        //cluster.submitTopology(config.getString("topology.name"), stormConf, builder.createTopology());
 
         System.out.println("Topology Storm Done!");
         System.out.println("Hot Select Stream done!");
