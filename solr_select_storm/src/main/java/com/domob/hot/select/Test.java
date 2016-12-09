@@ -1,9 +1,13 @@
 package com.domob.hot.select;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Test {
     public static void main(String[] args) {
-        String s = "params={q=*:*&indent=on&wt=json}";
-        System.out.println(s.substring(s.indexOf("{")+1, s.length()-1));
+        Pattern r = Pattern.compile("^solr\\..*");
+        Matcher m = r.matcher("solr.2016-11-10.log");
+        System.out.println(m.matches());
     }
 
 }
