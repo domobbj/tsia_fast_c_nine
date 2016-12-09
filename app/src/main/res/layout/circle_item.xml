@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitefe"
+    android:paddingBottom="5dp"
+
+    android:paddingTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/adlist_item_bg">
+
+        <langteng.com.redpocketmoney.widget.CircleImageView
+            android:id="@+id/user_icon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/circle_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_icon"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/round_red_bg"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="Tag"
+            android:textSize="11sp"
+            android:textColor="@color/whitefe" />
+
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/user_icon"
+            android:padding="10dp"
+            android:text="姓名" />
+
+
+        <langteng.com.redpocketmoney.widget.ExpandableTextView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/expand_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_name"
+            android:layout_marginBottom="@dimen/padding20"
+            android:layout_marginTop="@dimen/padding10"
+            android:layout_toRightOf="@+id/user_icon"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="@dimen/padding10"
+            expandableTextView:animDuration="200"
+            expandableTextView:maxCollapsedLines="3">
+
+            <TextView
+                android:id="@id/expandable_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:maxLines="2"
+                android:textColor="#8C8C8C"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@id/expand_collapse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:layout_marginTop="8dp"
+                android:background="@android:color/transparent"
+                android:text="展开全文"
+                android:textColor="@color/theme" />
+        </langteng.com.redpocketmoney.widget.ExpandableTextView>
+
+        <langteng.com.redpocketmoney.widget.NoScrollGridView
+            android:id="@+id/gridview_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expand_text_view"
+            android:layout_toRightOf="@+id/user_icon"
+            android:horizontalSpacing="12dp"
+            android:numColumns="2"
+            android:verticalSpacing="12dp"></langteng.com.redpocketmoney.widget.NoScrollGridView>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/gridview_img"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/user_icon"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding10"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/circle_time"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:text="time" />
+
+            <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="12dp"
+                android:layout_toLeftOf="@+id/prase_tv"
+                android:drawableLeft="@mipmap/zan"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="评论" />
+
+            <TextView
+                android:id="@+id/prase_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/pinglun"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="评论" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/loading"
+    android:layout_width="match_parent"
+    android:layout_height="35dp">
+
+    <View
+        android:id="@+id/foot_viewline"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="@color/viewline"></View>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foot_viewline"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp">
+
+        <com.langteng.yiqizhuan.baselibs.widget.RotateLoading
+            android:id="@+id/rotateloading"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/footer_load_more_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/rotateloading"
+            android:text="点击加载更多"
+            android:textColor="@color/black9"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    android:cacheColorHint="#00000000"
+    android:fadingEdge="none"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:id="@+id/top_navigate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding15"
+        android:paddingRight="@dimen/padding15">
+
+        <EditText
+            android:id="@+id/moble_edittext"
+            style="@style/edittext_style"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/regist_phone"
+            android:maxLength="11"
+            android:numeric="integer" />
+
+        <EditText
+            android:id="@+id/regist_phone_verification_et"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="15sp"
+            android:layout_below="@+id/moble_edittext"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/regist_phone_verification_hint"
+            android:maxLength="6"
+
+            android:textColor="@color/edittext"
+            android:textColorHint="@color/edittext_hint" />
+
+        <TextView
+            android:id="@+id/regist_phone_verification_tv"
+            style="@style/btn_login"
+            android:layout_alignBaseline="@+id/regist_phone_verification_et"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/regist_phone_verification_et"
+            android:text="@string/regist_phone_verification" />
+
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/regist_phone_verification_et"
+            android:layout_marginTop="10dp"
+            android:maxLength="16"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/regist_password"
+            android:inputType="textPassword"
+            android:textSize="15sp"
+            android:textColor="@color/edittext"
+            android:textColorHint="@color/edittext_hint" />
+
+        <EditText
+            android:id="@+id/password_et_confirm"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/password_et"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="@string/regist_password_again"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColor="@color/edittext"
+            android:textSize="15sp"
+            android:textColorHint="@color/edittext_hint" />
+
+        <Button
+            android:id="@+id/regist_btn"
+            style="@style/btn_login"
+            android:layout_below="@+id/password_et_confirm"
+            android:layout_marginTop="20dp"
+            android:text="@string/regist_button" />
+
+        <TextView
+            android:id="@+id/user_agreement_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_above="@+id/user_agreement_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/regist_texthint"
+            android:textColor="@color/black9" />
+
+        <TextView
+            android:id="@+id/user_agreement_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/user_agreement"
+            android:textColor="@color/app_bg" />
+
+    </RelativeLayout>
+</ScrollView>

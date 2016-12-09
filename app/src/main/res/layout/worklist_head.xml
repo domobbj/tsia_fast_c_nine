@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_grey">
+
+    <EditText
+        android:id="@+id/worker_search_edt"
+        style="@style/edittext_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp" />
+
+    <TextView
+        android:id="@+id/worker_search_num"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/worker_search_edt"
+        android:layout_margin="12dp"
+        android:gravity="center_vertical"
+        android:text="联系人" />
+</RelativeLayout>

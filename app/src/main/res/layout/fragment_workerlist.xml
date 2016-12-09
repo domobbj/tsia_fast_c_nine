@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_grey"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/whitefe"
+        android:layout_height="55dp">
+
+        <langteng.com.redpocketmoney.widget.ClearEditText1
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/worker_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:divider="@color/color_grey"
+        android:scrollbars="none"></ListView>
+
+</LinearLayout>

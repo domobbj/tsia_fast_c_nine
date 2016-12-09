@@ -1,0 +1,66 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    dexOptions {
+        incremental true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:24.+'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //  讯飞升级SDK
+    compile files('libs/AutoUpdate_SDK.jar')
+    //bmob-sdk  云服务
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //bmob-sdk  云服务
+    //  时间分发
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //轮播
+    compile 'com.bigkoo:convenientbanner:2.0.5'
+    //可上拉加载更多下拉刷新的SDK
+    compile 'com.canyinghao:canrefresh:1.0.6'
+    //各种动画依赖包
+    compile 'com.nineoldandroids:library:2.4.0'
+    //  微信sdk
+    compile files('libs/libammsdk.jar')
+    //  QQ SDK
+    compile files('libs/open_sdk_r5756_qq.jar')
+    //  百度统计SDK
+    compile files('libs/Baidu_Mtj_3.7.4.2.jar')
+    compile files('libs/rxjava-1.1.6.jar')
+    compile files('libs/rxandroid-1.2.0.jar')
+    compile files('libs/gson-2.6.2.jar')
+    compile files('libs/org.apache.http.legacy.jar')
+    compile files('libs/BmobNewIM_2.0.5_20160601.jar')
+    compile files('libs/Bmob_Push_V1.0.0beta_20160627.jar')
+    compile files('libs/okhttp-3.2.0.jar')
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.orhanobut:logger:1.4'
+    compile 'me.iwf.photopicker:PhotoPicker:0.1.8'
+    compile files('libs/universal-image-loader-1.9.5.jar')
+    compile files('libs/BmobSDK_V3.4.7_0527.jar')
+    compile files('libs/androidasync-2.1.6.jar')
+}

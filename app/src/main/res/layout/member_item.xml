@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_grey"
+    android:paddingBottom="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/whitefe">
+
+        <langteng.com.redpocketmoney.widget.CircleImageView
+            android:id="@+id/user_icon"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="5dp" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/user_icon"
+            android:gravity="left"
+            android:padding="5dp"
+            android:text="task_title"
+            android:textColor="@color/black3"
+            android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/select_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:src="@mipmap/next1" />
+
+    </RelativeLayout>
+</LinearLayout>

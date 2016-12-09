@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:fillViewport="true"
+    android:background="@mipmap/bg"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg"
+        android:paddingBottom="20dp"
+        android:paddingLeft="@dimen/padding15"
+        android:paddingRight="@dimen/padding15">
+
+        <ImageView
+            android:id="@+id/civ_user_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="60dp"
+            android:src="@mipmap/logo"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/civ_user_icon"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/gonghao" />
+
+            <EditText
+                android:id="@+id/ev_account"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="16dip"
+                android:hint="@string/str_input_login_account"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:textColor="@color/whitefe"
+                android:textColorHint="@color/whitefe"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/ll1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mima" />
+
+            <EditText
+                android:id="@+id/ev_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/view"
+                android:layout_marginLeft="10dp"
+                android:drawablePadding="16dp"
+                android:hint="@string/str_input_login_password"
+                android:inputType="textPassword"
+                android:maxLength="20"
+                android:singleLine="true"
+                android:textColor="@color/whitefe"
+                android:textColorHint="@color/whitefe"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_forget_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btn_login"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:padding="6dp"
+            android:text="@string/str_login_forget"
+            android:visibility="gone"
+            android:textColor="@color/bn_forget_pwd"
+            android:textSize="14sp" />
+
+        <ImageButton
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll2"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/btn"
+             />
+
+    </RelativeLayout>
+</ScrollView>

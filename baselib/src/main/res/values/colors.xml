@@ -1,0 +1,43 @@
+<resources>
+
+
+    <color name="theme">#279CEF</color>
+
+    <color name="app_bg2">#ffffffff</color>
+    <color name="app_bg">#92C37D</color>
+    <color name="app_background">#EEEEF3</color>
+    <color name="black">#000000</color>
+    <color name="black0">#6e6e75</color>
+    <color name="black3">#6e6e75</color>
+    <color name="black5">#919094</color>
+    <color name="black6">#919094</color>
+    <color name="black9">#999999</color>
+    <color name="gray92">#929292</color>
+    <color name="all_transparent">#00000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_bb">#bb000000</color>
+
+    <color name="whitefe">#fffefefe</color>
+    <color name="whitef4">#fff4f4f4</color>
+    <color name="viewline">#cccccc</color>
+    <color name="color_grey">#E8F2F8</color>
+    <color name="white">#ffffff</color>
+    <color name="dialog_tv">#7a7c82</color>
+    <color name="blacka3">#3a3a3a</color>
+    <color name="light_yellow">#fd8733</color>
+    <color name="colorPrimary">#7f0100ab</color>
+
+
+    <color name="divider">#FFE9E9E9</color>
+
+    <color name="edittext_hint">#d0d0d0</color>
+    <color name="edittext">#555555</color>
+    <color name="edit_text_color">#FF333333</color>
+    <color name="edit_underline">#FFE7E7E7</color>
+    <color name="bn_login">#4bd863</color>
+    <color name="bn_login_unclick">#bbbbbb</color>
+    <color name="bn_login_pressed">#24A239</color>
+    <color name="bn_register">@android:color/white</color>
+    <color name="bn_register_pressed">#FFE8E8E8</color>
+
+</resources>

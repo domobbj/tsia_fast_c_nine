@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="85dp"
+    android:background="@color/color_grey"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/whitefe"
+        android:padding="12dp">
+
+        <langteng.com.redpocketmoney.widget.CircleImageView
+            android:id="@+id/user_icon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_margin="5dp"
+            android:src="@mipmap/ic_launcher"
+             />
+
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/user_icon"
+            android:padding="5dp"
+            android:text="user_name"
+            android:textColor="@color/black3"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/user_workname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/user_icon"
+            android:padding="5dp"
+            android:text="user_workname"
+            android:textColor="@color/black6"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/next1" />
+    </RelativeLayout>
+</LinearLayout>

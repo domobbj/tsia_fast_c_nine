@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top_bar_rl"
+        android:layout_width="match_parent"
+        android:background="@color/theme"
+        android:layout_height="48dp">
+        <TextView
+            android:id="@+id/title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="主页" />
+
+        <TextView
+            android:id="@+id/publish_tv"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:text="+" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_bottom"
+        android:layout_below="@+id/top_bar_rl">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/whitefe"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/main_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/message"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:paddingBottom="5dp"
+            android:text="消息"
+            android:drawablePadding="5dp"
+            android:textColor="@drawable/main_tv_textcolor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/emoji_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/find"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:paddingBottom="5dp"
+            android:text="发现同事"
+            android:drawablePadding="5dp"
+            android:textColor="@drawable/main_tv_textcolor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/setting_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/app"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:drawablePadding="5dp"
+            android:paddingBottom="5dp"
+            android:text="应用"
+            android:textColor="@drawable/main_tv_textcolor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/circle_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/circle"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:paddingBottom="5dp"
+            android:drawablePadding="5dp"
+            android:text="同事圈"
+            android:textColor="@drawable/main_tv_textcolor"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>

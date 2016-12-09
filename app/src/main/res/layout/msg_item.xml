@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/adlist_item_bg">
+        <langteng.com.redpocketmoney.widget.CircleImageView
+            android:id="@+id/msg_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="5dp" />
+
+        <TextView
+            android:id="@+id/msg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/msg_icon"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="title"
+            android:textColor="@color/black3"
+            android:textSize="14.5sp" />
+
+        <TextView
+            android:id="@+id/msg_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/msg_title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@+id/msg_icon"
+            android:text="article_author_tv"
+            android:textColor="@color/black6"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/msg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="8dp"
+            android:text="Time"
+            android:textColor="@color/black9"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+
+    defaultConfig {
+        applicationId "domob.tsia.com.programming"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    signingConfigs {
+        config {
+            keyAlias 'com.kuailexue.student'
+            keyPassword 'kM8irdisappear'
+            storeFile file('keystore/yiqizhuan.jks')
+            storePassword 'Snow0nR1ver'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+            debuggable true
+            jniDebuggable true
+        }
+    }
+
+
+    repositories {
+        flatDir { dirs 'libs' }
+    }
+    dexOptions {
+        incremental true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':baselib')
+    //阿里百川的 反馈sdk
+    compile(name: 'feedbackSdk', ext: 'aar')
+    //可上拉加载更多的 Gridvieww
+    compile 'com.github.nicolasjafelle:paginggridview:1.0'
+}

@@ -1,0 +1,256 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_grey">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whitefe"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                android:id="@+id/publisher1"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="发布者："
+                android:textColor="@color/theme" />
+
+            <TextView
+                android:id="@+id/publisher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/taskname1"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+
+                android:text="发布者" />
+
+            <View
+                android:id="@+id/viewline0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/publisher"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/color_grey"></View>
+
+
+            <TextView
+                android:id="@+id/taskname1"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_below="@+id/viewline0"
+                android:layout_marginTop="8dp"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="任务名称："
+                android:textColor="@color/theme" />
+
+            <TextView
+                android:id="@+id/taskname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/viewline0"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="任务名称" />
+
+            <View
+                android:id="@+id/viewline1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/taskname"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/color_grey"></View>
+
+            <TextView
+                android:id="@+id/taskdetail1"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_below="@+id/viewline1"
+                android:layout_marginTop="8dp"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="任务详情："
+                android:textColor="@color/theme" />
+
+            <TextView
+                android:id="@+id/taskdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewline1"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/taskdetail1"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="" />
+
+            <View
+                android:id="@+id/viewline2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/taskdetail"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/color_grey"></View>
+
+
+            <TextView
+                android:id="@+id/task_worker1"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_below="@+id/viewline2"
+                android:layout_marginTop="8dp"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="任务成员："
+                android:textColor="@color/theme" />
+
+            <TextView
+                android:id="@+id/task_worker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewline2"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/taskdetail1"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="" />
+
+            <View
+                android:id="@+id/viewline3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/task_worker"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/color_grey"></View>
+
+
+            <TextView
+                android:id="@+id/task_endtime1"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_below="@+id/viewline3"
+                android:layout_marginTop="8dp"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="截止时间："
+                android:textColor="@color/theme" />
+
+            <TextView
+                android:id="@+id/task_endtime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewline3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/taskdetail1"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="" />
+
+            <View
+                android:id="@+id/viewline4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/task_endtime1"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/color_grey"></View>
+
+
+            <TextView
+                android:id="@+id/task_status1"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_below="@+id/viewline4"
+                android:layout_marginTop="8dp"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="任务状态："
+                android:textColor="@color/theme" />
+
+            <TextView
+                android:id="@+id/task_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewline4"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/taskdetail1"
+                android:background="@color/whitefe"
+                android:drawableRight="@mipmap/next1"
+                android:gravity="center_vertical"
+                android:text="未完成" />
+
+            <View
+                android:id="@+id/viewline5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/task_status"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/color_grey"></View>
+
+            <TextView
+                android:id="@+id/task_hint1"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_below="@+id/viewline5"
+                android:layout_marginTop="8dp"
+                android:background="@color/whitefe"
+                android:gravity="center_vertical"
+                android:text="补充说明："
+                android:textColor="@color/theme" />
+
+            <EditText
+                android:id="@+id/update_edt"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_below="@+id/viewline5"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left|top"
+                android:layout_toRightOf="@+id/task_hint1"
+                android:background="@drawable/bn_login"
+                android:text="" />
+
+            <Button
+                android:id="@+id/update_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/update_edt"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/whitefe"
+                android:background="@drawable/bn_register1"
+                android:text="提交" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

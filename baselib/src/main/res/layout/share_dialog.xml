@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00ffffff">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background">
+
+        <LinearLayout
+            android:id="@+id/share_ll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="16dip"
+            android:paddingRight="16dip"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/share_qqfriend_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/padding10"
+                android:drawableTop="@mipmap/qq"
+                android:gravity="center_horizontal"
+                android:text="QQ分享"
+                android:textColor="#666666" />
+
+            <TextView
+                android:id="@+id/share_wechatfriend_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/padding10"
+                android:drawableTop="@mipmap/logo_wechat2"
+                android:gravity="center_horizontal"
+                android:text="微信好友"
+                android:textColor="#666666" />
+
+            <TextView
+                android:id="@+id/share_wechatzone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/padding10"
+                android:drawableTop="@mipmap/logo_wechat1"
+                android:gravity="center_horizontal"
+                android:text="微信朋友圈"
+                android:textColor="#666666" />
+
+            <TextView
+                android:id="@+id/share_message_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/padding10"
+                android:drawableTop="@mipmap/message"
+                android:gravity="center_horizontal"
+                android:text="短信分享"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/share_cancle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_below="@+id/share_ll"
+            android:layout_marginBottom="@dimen/padding10"
+            android:layout_marginLeft="@dimen/padding20"
+            android:layout_marginRight="@dimen/padding20"
+            android:layout_marginTop="@dimen/padding20"
+            android:background="@drawable/bn_login"
+            android:text="取消"
+            android:textColor="@color/whitefe"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

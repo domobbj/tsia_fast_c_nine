@@ -1,1 +1,6 @@
 .idea
+.gradle/
+
+app/src/main/jniLibs/
+app/src/main/res/drawable-ldpi/
+Would skip repository programming/

@@ -1,0 +1,14 @@
+签名打包：
+江雪
+千山鸟飞绝，万径人踪灭，孤舟蓑笠翁，独钓寒江雪
+
+key store path: /app/src/main/document/keystore.jks
+key store password: Snow0nR1ver
+key 1 alias: com.kuailexue.student
+key 1 password: kM8irdisappear
+
+
+
+  storePassword "allstar"
+            keyAlias "youmingxing"
+            keyPassword "allstar"

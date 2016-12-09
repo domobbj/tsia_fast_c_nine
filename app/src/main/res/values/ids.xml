@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item type="id" name="gridview" />
+    <item type="id" name="webview" />
+    <item type="id" name="scrollview" />
+
+    <item type="id" name="expandable_text"/>
+    <item type="id" name="expand_collapse"/>
+
+    <declare-styleable name="EditTextWithSeparator">
+        <attr name="separatorColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="HtmlTable">
+        <attr name="textColor1" format="color"/>
+        <attr name="textSize1" format="dimension"/>
+        <attr name="textLineSpacingExtra" format="float"/>
+        <attr name="textLineSpacingMultiplier" format="float"/>
+        <attr name="borderColor" format="color"/>
+        <attr name="borderWidth1" format="dimension"/>
+        <attr name="borderStyle">
+            <enum name="thick" value="0"/>
+            <enum name="thin" value="1"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SplashSentence">
+        <attr name="english" format="string" localization="suggested" />
+        <attr name="englishSign" format="string" localization="suggested" />
+        <attr name="chinese" format="string" localization="suggested" />
+        <attr name="chineseSign" format="string" localization="suggested" />
+        <attr name="backgroundColor" format="color"/>
+        <attr name="inset" format="reference"/>
+    </declare-styleable>
+
+</resources>

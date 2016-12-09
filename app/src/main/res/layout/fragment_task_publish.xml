@@ -1,0 +1,107 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_grey"
+        android:padding="12dp">
+
+        <EditText
+            android:id="@+id/task_edt_name"
+            style="@style/edittext_style"
+            android:layout_width="match_parent"
+            android:layout_height="38dp" />
+
+        <EditText
+            android:id="@+id/task_edt_content"
+            style="@style/edittext_style"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/task_edt_name"
+            android:layout_marginTop="10dp"
+            android:gravity="left|top" />
+
+        <TextView
+            android:id="@+id/add_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/task_edt_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/upload"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="选择图片"
+            android:textColor="@color/theme"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_img"
+            android:layout_marginTop="12dp"
+            android:background="@color/whitefe"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/task_member"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@mipmap/next1"
+                android:gravity="center_vertical"
+                android:text="任务成员" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/task_member">
+
+                <ImageView
+                    android:id="@+id/member_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:src="@mipmap/add" />
+
+                <langteng.com.redpocketmoney.widget.NoScrollGridView
+                    android:id="@+id/user_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/member_icon"
+                    android:horizontalSpacing="8dp"
+                    android:numColumns="auto_fit"
+                    android:verticalSpacing="8dp"></langteng.com.redpocketmoney.widget.NoScrollGridView>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/publish_time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/whitefe"
+                android:drawableLeft="@mipmap/time"
+                android:drawablePadding="10dp"
+                android:drawableRight="@mipmap/next1"
+                android:gravity="center_vertical"
+                android:text="截止日期" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/publish_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:background="@mipmap/finish" />
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_grey">
+
+    <LinearLayout
+        android:id="@+id/top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <langteng.com.redpocketmoney.widget.ClearEditText1
+            android:id="@+id/message_edt"
+            style="@style/edittext_style"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="8dp" />
+
+        <RelativeLayout
+            android:id="@+id/head_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <langteng.com.redpocketmoney.widget.CircleImageView
+                android:id="@+id/user_icon"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_margin="12dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_marginRight="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/user_icon"
+                android:drawableRight="@mipmap/next1"
+                android:gravity="left" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/msg_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_ll"
+        android:layout_marginTop="8dp"
+        android:divider="@color/color_grey"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"></ListView>
+
+
+</RelativeLayout>

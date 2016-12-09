@@ -1,0 +1,125 @@
+
+
+
+
+
+显示图片
+
+ OkHttpUtils
+    .get()//
+    .url(url)//
+    .build()//
+    .execute(new BitmapCallback()
+    {
+        @Override
+        public void onError(Request request, Exception e)
+        {
+            mTv.setText("onError:" + e.getMessage());
+        }
+
+        @Override
+        public void onResponse(Bitmap bitmap)
+        {
+            mImageView.setImageBitmap(bitmap);
+        }
+    });
+
+
+
+
+下载文件
+
+
+ OkHttpUtils.get().url(imgList.get(i))
+                    .build()
+                    .execute(new FileCallBack(
+                            Environment.getExternalStorageDirectory().getAbsolutePath() + "/aaa",
+                            i + "" + imgName)//
+                    {
+                        @Override
+                        public void onError(Call call, Exception e, int id) {
+
+                        }
+
+                        @Override
+                        public void onResponse(File response, int id) {
+                            Logger.i("----response--", id + " response: " + response.getPath());
+                            String imgs[] = new String[1];
+                            imgs[0] = response.getPath();
+                            uploadImg(imgs);
+                        }
+                    });
+
+
+
+
+GET请求
+String url = "http://www.csdn.net/";
+OkHttpUtils
+    .get()
+    .url(url)
+    .addParams("username", "hyman")
+    .addParams("password", "123")
+    .build()
+    .execute(new StringCallback()
+            {
+                @Override
+                public void onError(Request request, Exception e)
+                {
+
+                }
+
+                @Override
+                public void onResponse(String response)
+                {
+
+                }
+            });
+
+
+POST请求
+
+ OkHttpUtils
+                    .post()
+                    .url("")
+                    .addParams("username", "hyman")
+                    .addParams("password", "123")
+                    .build()
+                    .execute(new StringCallback() {
+                        @Override
+                        public void onError(Call call, Exception e, int id) {
+
+                        }
+
+                        @Override
+                        public void onResponse(String response, int id) {
+
+                        }
+                    });
+
+
+
+
+
+Post File
+ OkHttpUtils
+     .postFile()
+     .url(url)
+     .file(file)
+     .build()
+     .execute(new MyStringCallback());
+
+
+
+
+
+Post表单形式上传文件
+
+OkHttpUtils.post()//
+    .addFile("mFile", "messenger_01.png", file)//
+    .addFile("mFile", "test1.txt", file2)//
+    .url(url)
+    .params(params)//
+    .headers(headers)//
+    .build()//
+    .execute(new MyStringCallback());

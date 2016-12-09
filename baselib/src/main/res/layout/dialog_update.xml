@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="25dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:background="@drawable/circular_corner_dialog"
+        android:padding="18dp">
+
+
+        <ImageView
+            android:id="@+id/cancle"
+            android:layout_width="0dp"
+            android:visibility="invisible"
+            android:layout_height="0dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/exchange_dismiss_icon" />
+
+        <langteng.com.baselib.widget.RingProgressBar
+            android:id="@+id/progress_bar_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            app:max="100"
+            android:layout_marginTop="15dp"
+            app:ringColor="@android:color/darker_gray"
+            app:ringProgressColor="@color/theme"
+            app:ringWidth="3dp"
+            app:style="STROKE"
+            app:textColor="@color/black5"
+            app:textIsShow="true"
+            app:textSize="16sp"  />
+
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="正在下载中..."
+            android:textColor="@color/theme"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

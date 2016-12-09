@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bigkoo.convenientbanner.ConvenientBanner
+        android:id="@+id/circle_banner"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"></com.bigkoo.convenientbanner.ConvenientBanner>
+
+    <ListView
+        android:id="@+id/circle_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"></ListView>
+
+</RelativeLayout>

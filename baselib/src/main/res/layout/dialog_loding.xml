@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dip">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/loadimg1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@mipmap/load_backgroud" />
+
+        <ImageView
+            android:id="@+id/loadimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/load_img" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/id_tv_loadingmsg"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="15dip"
+        android:gravity="center_vertical|center_horizontal"
+        android:minWidth="140dip"
+        android:visibility="gone"
+        android:text="正在加载..."
+        android:textColor="#FF4bd863"
+        android:textSize="16.0sp" />
+
+</LinearLayout>

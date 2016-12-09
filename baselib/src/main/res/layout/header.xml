@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:background="@color/theme">
+
+    <ImageView
+        android:id="@+id/header_iv_left"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingBottom="5dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip"
+        android:src="@drawable/title_back_bt_selector" />
+
+    <TextView
+        android:id="@+id/header_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="title"
+        android:textColor="@color/whitefe"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/header_tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dip"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="5dip"
+        android:text="right"
+        android:textColor="@color/whitefe"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/viewline"></View>
+
+</RelativeLayout>

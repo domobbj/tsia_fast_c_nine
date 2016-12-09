@@ -1,0 +1,65 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_grey"
+        android:padding="12dp">
+
+        <EditText
+            android:id="@+id/circle_publish_edt"
+            style="@style/edittext_style"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:gravity="left|top" />
+
+        <TextView
+            android:id="@+id/add_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circle_publish_edt"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/upload"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="选择图片"
+            android:textColor="@color/theme" />
+
+        <TextView
+            android:id="@+id/circle_publish_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_img"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="选择标签" />
+
+        <langteng.com.redpocketmoney.widget.TagListView xmlns:f="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/circle_tagview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circle_publish_hint"
+            android:paddingBottom="@dimen/common_margin"
+            android:paddingLeft="@dimen/common_margin"
+            android:paddingRight="@dimen/common_margin"
+            android:paddingTop="16.0dip"
+            f:horizontalSpacing="@dimen/tag_horizontal_spacing"
+            f:orientation="horizontal"
+            f:verticalSpacing="@dimen/tag_vertical_spacing" />
+
+        <ImageButton
+            android:id="@+id/circle_publish_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circle_tagview"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/circle_publish" />
+    </RelativeLayout>
+
+</ScrollView>

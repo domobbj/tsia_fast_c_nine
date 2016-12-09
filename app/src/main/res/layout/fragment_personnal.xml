@@ -1,0 +1,146 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_grey"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/head_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whitefe"
+            android:padding="12dp">
+
+            <langteng.com.redpocketmoney.widget.CircleImageView
+                android:id="@+id/user_icon"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_margin="5dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/user_icon"
+                android:padding="8dp"
+                android:text="姓名  张三"
+                android:textColor="@color/black3"
+                android:textSize="16sp"></TextView>
+
+            <TextView
+                android:id="@+id/user_work"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_centerHorizontal="true"
+                android:layout_toRightOf="@+id/user_icon"
+                android:drawablePadding="10dp"
+                android:padding="8dp"
+                android:text="人力资源部  招聘专员"
+                android:textColor="@color/black6"
+                android:textSize="16sp"></TextView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@color/whitefe"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/head_rl"
+                android:layout_centerHorizontal="true"
+                android:background="@color/whitefe"
+                android:drawableLeft="@mipmap/mobile"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:padding="12dp"
+                android:text="电话"
+                android:textColor="@color/black0"
+                android:textSize="16sp"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/color_grey"></View>
+
+            <TextView
+                android:id="@+id/user_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_mobile"
+                android:layout_centerHorizontal="true"
+                android:background="@color/whitefe"
+                android:drawableLeft="@mipmap/tag"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:paddingBottom="9dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="9dp"
+                android:text="专属标签"
+                android:textColor="@color/black0"
+                android:textSize="16sp"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/color_grey"></View>
+
+            <TextView
+                android:id="@+id/user_pos_tv"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/user_tag"
+                android:layout_centerHorizontal="true"
+                android:background="@color/whitefe"
+                android:drawableLeft="@mipmap/user_pos"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:padding="12dp"
+                android:text="工位"
+                android:textColor="@color/black0"
+                android:textSize="16sp"></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/color_grey"></View>
+
+            <TextView
+                android:id="@+id/user_email"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@+id/user_pos_tv"
+                android:layout_centerHorizontal="true"
+                android:background="@color/whitefe"
+                android:drawableLeft="@mipmap/email"
+                android:drawablePadding="10dp"
+                android:gravity="left|center_vertical"
+                android:padding="12dp"
+                android:text="邮箱"
+                android:textColor="@color/black0"
+                android:textSize="16sp"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

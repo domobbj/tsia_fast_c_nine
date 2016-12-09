@@ -1,0 +1,288 @@
+
+
+//   用户是否登陆
+BmobUser bmobUser = BmobUser.getCurrentUser();
+if(bmobUser != null){
+    // 允许用户使用应用
+}else{
+    //缓存用户对象为空时， 可打开用户注册界面…
+}
+
+
+
+
+
+
+//详细示例可查看BmobExample工程中BmobFileActivity类
+String filePath_mp3 = "/mnt/sdcard/testbmob/test1.png";
+String filePath_lrc = "/mnt/sdcard/testbmob/test2.png";
+final String[] filePaths = new String[2];
+filePaths[0] = filePath_mp3;
+filePaths[1] = filePath_lrc;
+BmobFile.uploadBatch(filePaths, new UploadBatchListener() {
+
+    @Override
+    public void onSuccess(List<BmobFile> files,List<String> urls) {
+        //1、files-上传完成后的BmobFile集合，是为了方便大家对其上传后的数据进行操作，例如你可以将该文件保存到表中
+        //2、urls-上传文件的完整url地址
+        if(urls.size()==filePaths.length){//如果数量相等，则代表文件全部上传完成
+            //do something
+        }
+    }
+
+    @Override
+    public void onError(int statuscode, String errormsg) {
+        ShowToast("错误码"+statuscode +",错误描述："+errormsg);
+    }
+
+    @Override
+    public void onProgress(int curIndex, int curPercent, int total,int totalPercent) {
+        //1、curIndex--表示当前第几个文件正在上传
+        //2、curPercent--表示当前上传文件的进度值（百分比）
+        //3、total--表示总的上传文件数
+        //4、totalPercent--表示总的上传进度（百分比）
+    }
+});
+
+
+
+
+http://docs.bmob.cn/data/Android/b_developdoc/doc/index.html#数据关联性
+
+
+在Bmob对象中提供了一个静态方法，用于获取服务器时间。
+
+Bmob.getServerTime(new QueryListener<Long>() {
+
+    @Override
+    public void done(long time,BmobException e) {
+        if(e==null){
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+            String times = formatter.format(new Date(time * 1000L));
+            Log.i("bmob","当前服务器时间为:" + times);
+        }else{
+            Log.i("bmob","获取服务器时间失败:" + e.getMessage());
+        }
+    }
+
+});
+
+
+
+查询单条数据
+当我们知道某条数据的objectId时，就可以根据objectId直接获取单条数据对象。例如：查询objectId为a203eba875的人员信息。
+
+BmobQuery<GameScore> query = new BmobQuery<GameScore>();
+query.getObject("a203eba875", new QueryListener<GameScore>() {
+
+    @Override
+    public void done(GameScore object, BmobException e) {
+        if(e==null){
+            //获得playerName的信息
+            object.getPlayerName();
+            //获得数据的objectId信息
+            object.getObjectId();
+            //获得createdAt数据创建时间（注意是：createdAt，不是createAt）
+            object.getCreatedAt();
+        }else{
+            Log.i("bmob","失败："+e.getMessage()+","+e.getErrorCode());
+        }
+    }
+});
+
+
+
+
+查询多条数据
+查询某个数据表中的所有数据是非常简单的查询操作，例如：查询GameScore表中playerName为“比目”的50条数据记录
+
+BmobQuery<GameScore> query = new BmobQuery<GameScore>();
+//查询playerName叫“比目”的数据
+query.addWhereEqualTo("playerName", "比目");
+//返回50条数据，如果不加上这条语句，默认返回10条数据
+query.setLimit(50);
+//执行查询方法
+query.findObjects(new FindListener<GameScore>() {
+    @Override
+    public void done(List<GameScore> object, BmobException e) {
+        if(e==null){
+            toast("查询成功：共"+object.size()+"条数据。");
+            for (GameScore gameScore : object) {
+               //获得playerName的信息
+               gameScore.getPlayerName();
+               //获得数据的objectId信息
+               gameScore.getObjectId();
+               //获得createdAt数据创建时间（注意是：createdAt，不是createAt）
+               gameScore.getCreatedAt();
+            }
+        }else{
+            Log.i("bmob","失败："+e.getMessage()+","+e.getErrorCode());
+        }
+    }
+});
+
+
+
+分页查询
+
+有时，在数据比较多的情况下，你希望查询出的符合要求的所有数据能按照多少条为一页来显示，这时可以使用setLimit方法来限制查询结果的数据条数来进行分页。
+
+默认情况下，Limit的值为100，最大有效设置值1000（设置的数值超过1000还是视为1000）。
+
+query.setLimit(10); // 限制最多10条数据结果作为一页
+在数据较多的情况下，在setLimit的基础上分页显示数据是比较合理的解决办法。
+setSKip方法可以做到跳过查询的前多少条数据来实现分页查询的功能。默认情况下Skip的值为10。
+
+query.setSkip(10); // 忽略前10条数据（即第一页数据结果）
+
+
+
+
+
+比较查询
+
+如果要查询特定键的特定值，可以使用addWhereEqualTo方法，如果要过滤掉特定键的值可以使用addWhereNotEqualTo方法。
+
+比如需要查询playerName不等于“Barbie”的数据时可以这样写：
+
+query.addWhereNotEqualTo("playerName", "Barbie");
+当然，你可以在你的查询操作中添加多个约束条件，来查询符合要求的数据。
+
+query.addWhereNotEqualTo("playerName", "Barbie");     //名字不等于Barbie
+query.addWhereGreaterThan("score", 60);                //条件：分数大于60岁
+各种不同条件的比较查询：
+
+// 分数 < 50
+query.addWhereLessThan("score", 50);
+//分数 <= 50
+query.addWhereLessThanOrEqualTo("score", 50);
+//分数 > 50
+query.addWhereGreaterThan("score", 50);
+//分数 >= 50
+query.addWhereGreaterThanOrEqualTo("score", 50);
+
+
+
+
+子查询
+
+如果你想查询匹配几个不同值的数据，如：要查询“Barbie”,“Joe”,“Julia”三个人的成绩时，你可以使用addWhereContainedIn方法来实现。
+
+String[] names = {"Barbie", "Joe", "Julia"};
+query.addWhereContainedIn("playerName", Arrays.asList(names));
+相反，如果你想查询排除“Barbie”,“Joe”,“Julia”这三个人的其他同学的信息，你可以使用addWhereNotContainedIn方法来实现。
+
+String[] names = {"Barbie", "Joe", "Julia"};
+query.addWhereNotContainedIn("playerName", Arrays.asList(names));
+
+
+时间查询
+
+时间查询比较特殊，我们需要结合BmobDate这个类来查询某个指定日期时间前后的数据，这里也给出示例供大家参考：
+
+比如:
+如果想查询指定日期之前的数据，则可以使用addWhereLessThan或者addWhereLessThanOrEqualTo（包含当天）来查询。
+如果想查询指定日期之后的数据，则可以使用addWhereGreaterThan或addWhereGreaterThanOrEqualTo（包含当天）来查询。
+如果想查询指定时间当天的数据，则需要使用复合与查询来查询，例如，想查询2015年5月1号当天的Person数据,示例代码如下：
+
+BmobQuery<Person> query = new BmobQuery<Person>();
+List<BmobQuery<Person>> and = new ArrayList<BmobQuery<Person>>();
+//大于00：00：00
+BmobQuery<Person> q1 = new BmobQuery<Person>();
+String start = "2015-05-01 00:00:00";
+SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+Date date  = null;
+try {
+date = sdf.parse(start);
+} catch (ParseException e) {
+e.printStackTrace();
+}
+q1.addWhereGreaterThanOrEqualTo("createdAt",new BmobDate(date));
+and.add(q1);
+//小于23：59：59
+BmobQuery<Person> q2 = new BmobQuery<Person>();
+String end = "2015-05-01 23:59:59";
+SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+Date date1  = null;
+try {
+date1 = sdf1.parse(end);
+} catch (ParseException e) {
+e.printStackTrace();
+}
+q2.addWhereLessThanOrEqualTo("createdAt",new BmobDate(date1));
+and.add(q2);
+//添加复合与查询
+query.and(and);
+注：
+由于createdAt、updatedAt是服务器自动生成的时间，
+在服务器保存的是精确到微秒值的时间，所以，基于时间类型的比较的值要加1秒。
+
+
+
+数组查询
+
+对于字段类型为数组的情况，需要查找字段中的数组值包含有xxx的对象，可以使用addWhereContainsAll方法：
+
+比如我想查询有阅读和唱歌爱好的人，可以这样：
+
+BmobQuery<Person> query = new BmobQuery<Person>();
+String [] hobby = {"阅读","唱歌"};
+query.addWhereContainsAll("hobby", Arrays.asList(hobby));
+query.findObjects(new FindListener<Person>() {
+
+    @Override
+    public void done(List<Person> object, BmobException e) {
+        if(e==null){
+            ...
+        }else{
+            ...
+        }
+    }
+
+});
+模糊查询
+
+对字符串值的模糊查询 比如 查询包含字符串的值，有几种方法。
+
+你可以使用任何正确的正则表达式来检索相匹配的值，使用addWhereMatches方法：
+
+query.addWhereMatches(("username", "^[A-Z]\\d");
+还可以使用如下方法：
+
+//查询username字段的值含有“sm”的数据
+query.addWhereContains("username", "sm");
+
+//查询username字段的值是以“sm“字开头的数据
+query.whereStartsWith("username", "sm");
+
+// 查询username字段的值是以“ile“字结尾的数据
+query.whereEndsWith("username", "ile");
+列值是否存在
+
+如果你想查询某个列的值存在，那么可以使用addWhereExists方法：
+
+//查询username有值的数据
+query.addWhereExists("username");
+如果想查询某个列的值不存在，则可以用addWhereDoesNotExists方法
+
+//查询username字段没有值的数据
+query.addWhereDoesNotExists("username");
+
+
+
+
+
+数据关联性
+关联关系描述
+在程序设计中，不同类型的数据之间可能存在某种关系。
+比如：帖子和作者的关系，一篇帖子只属于某个作者，这是一对一的关系。
+比如：帖子和评论的关系，一条评论只属于某一篇帖子，而一篇帖子对应有很多条评论，这是一对多的关系。
+比如：学生和课程的关系，一个学生可以选择很多课程，一个课程也可以被很多学生所选择，这是多对多的关系。
+
+Bmob提供了Pointer（一对一、一对多）和Relation（多对多）两种数据类型来解决这种业务需求。
+
+
+
+
+
+

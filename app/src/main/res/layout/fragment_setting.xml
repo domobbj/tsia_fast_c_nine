@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitefe"
+    android:padding="12dp">
+
+
+    <TextView
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:drawableLeft="@mipmap/feedback"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="6dp"
+        android:text="问题反馈"
+        android:textColor="@color/black0"
+        android:textSize="16sp"></TextView>
+
+
+    <TextView
+        android:id="@+id/visionupdate"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/feedback"
+        android:background="?android:attr/selectableItemBackground"
+        android:drawableLeft="@mipmap/feedback"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:padding="6dp"
+        android:text="版本检查"
+        android:textColor="@color/black0"
+        android:textSize="16sp"></TextView>
+
+
+</RelativeLayout>
