@@ -40,7 +40,7 @@ public class ActivityWorker extends LibBaseActivity {
             transacction.replace(R.id.fragment, testFragment);
         } else if ("WorkerFragment".equals(getIntent().getStringExtra("tag"))) {
             //   他人基本信息
-            WorkerFragment workerFragment = new WorkerFragment();
+            WorkerInfoFragment workerFragment = new WorkerInfoFragment();
             transacction.replace(R.id.fragment, workerFragment);
             workerFragment.setUserName(id);
         } else if ("WebviewFragment".equals(getIntent().getStringExtra("tag"))) {

@@ -1,11 +1,13 @@
 package langteng.com.redpocketmoney.ui.personnal;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -21,6 +23,7 @@ import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.listener.FindListener;
 import langteng.com.baselib.GlobalApplication;
 import langteng.com.baselib.baseui.LibBaseFragment;
+import langteng.com.baselib.utils.StringUtil;
 import langteng.com.redpocketmoney.R;
 import langteng.com.redpocketmoney.ui.login._User;
 import langteng.com.redpocketmoney.ui.message.ChatActivity;
@@ -29,17 +32,17 @@ import langteng.com.redpocketmoney.widget.CircleImageView;
 /**
  * 同事个人信息
  */
-public class WorkerFragment extends LibBaseFragment {
+public class WorkerInfoFragment extends LibBaseFragment {
 
     private _User user;
 
     private CircleImageView userIcon;
     private TextView userName;
     private TextView userWork;
-    private TextView userMob;
+    private ImageView userMob;
     private TextView userEmail;
 
-    private TextView sendMsg;
+    private ImageView sendMsg;
 
     private TextView userPos;
 
@@ -48,16 +51,16 @@ public class WorkerFragment extends LibBaseFragment {
         userIcon = (CircleImageView) view.findViewById(R.id.user_icon);
         userName = (TextView) view.findViewById(R.id.user_name);
         userWork = (TextView) view.findViewById(R.id.user_work);
-        userMob = (TextView) view.findViewById(R.id.user_mobile);
+        userMob = (ImageView) view.findViewById(R.id.user_mobile);
         userEmail = (TextView) view.findViewById(R.id.worker_email_tv);
-        sendMsg = (TextView) view.findViewById(R.id.send_msg);
+        sendMsg = (ImageView) view.findViewById(R.id.send_msg);
 
         userPos = (TextView) view.findViewById(R.id.worker_pos_tv);
         userPos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ActivityWorker.startActivityWorker(getActivity(),"WebviewFragment"
-                ,"位置","http://10.0.0.206:29097/tsia_fast_c_nine/h5service/index.php/map/index");
+                ActivityWorker.startActivityWorker(getActivity(), "WebviewFragment"
+                        , "位置", "http://10.0.0.206:29097/tsia_fast_c_nine/h5service/index.php/map/index");
             }
         });
 
@@ -66,6 +69,13 @@ public class WorkerFragment extends LibBaseFragment {
             @Override
             public void onClick(View view) {
 
+                String number = user.getMobilePhoneNumber();
+                if (StringUtil.isEmpty(number)) {
+                    showToast("没有获得电话号码");
+                    return;
+                }
+                Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + number));
+                startActivity(intent);
             }
         });
 
@@ -114,11 +124,12 @@ public class WorkerFragment extends LibBaseFragment {
         query.findObjects(getActivity(), new FindListener<_User>() {
             @Override
             public void onSuccess(List<_User> list) {
-                if (list.size()>0) {
+                if (list.size() > 0) {
                     user = list.get(0);
                     setDate(list.get(0));
                 }
             }
+
             @Override
             public void onError(int i, String s) {
 
@@ -138,7 +149,11 @@ public class WorkerFragment extends LibBaseFragment {
         userName.setText(user.userNickName);
         userWork.setText(user.userWork);
 //        userMob.setText("电话： " + user.getMobilePhoneNumber() + "");
-        userEmail.setText("邮箱： " + user.getEmail());
+        if (!StringUtil.isEmpty(user.getEmail())) {
+            userEmail.setText("邮箱： " + user.getEmail());
+        } else {
+            userEmail.setText("邮箱：mail@domob.cn ");
+        }
     }
 
 }

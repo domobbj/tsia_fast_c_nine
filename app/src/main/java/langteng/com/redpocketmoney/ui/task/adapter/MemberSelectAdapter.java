@@ -55,9 +55,9 @@ public class MemberSelectAdapter extends BaseAdapter {
         }
         CircleImageView iconImg = ViewHolderUtils.getViewHolderView(convertView, R.id.user_icon);
         Glide.with(GlobalApplication.getInstance())
-                .load(membersList.get(position).userIcon)
+                .load(membersList.get(position).iconFile)
                 .asBitmap()
-                .placeholder(R.mipmap.defalut_icon)
+                .placeholder(R.mipmap.ic_launcher)
                 .into(iconImg);
         return convertView;
     }

@@ -71,6 +71,7 @@ public class CircleListFragment extends Fragment implements View.OnClickListener
             @Override
             public void onSuccess(List<CircleModel> list) {
                 Logger.i("---CircleModel--query---", "list: " + list.size());
+                circleModelList.clear();
                 circleModelList.addAll(list);
                 adapter.notifyDataSetChanged();
             }

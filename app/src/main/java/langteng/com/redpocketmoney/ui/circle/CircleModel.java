@@ -25,6 +25,11 @@ public class CircleModel extends BmobObject {
     public String content;
 
     /**
+     * 内容
+     **/
+    public boolean isShow = false;
+
+    /**
      * 发表时间
      **/
     public String publishTime;
@@ -35,7 +40,7 @@ public class CircleModel extends BmobObject {
     /**
      * 内容 图片
      **/
-    public List<String> contentImgs = new ArrayList<>();
+    public ArrayList<String> contentImgs = new ArrayList<>();
 
 
     /**

@@ -67,7 +67,7 @@ public class MemberListAdapter extends BaseAdapter {
         Glide.with(GlobalApplication.getInstance())
                 .load(membersList.get(position).userIcon)
                 .asBitmap()
-                .placeholder(R.mipmap.defalut_icon)
+                .placeholder(R.mipmap.ic_launcher)
                 .into(iconImg);
         return convertView;
     }

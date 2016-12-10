@@ -1,43 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="85dp"
+    android:layout_height="70dp"
     android:background="@color/color_grey"
     android:paddingBottom="5dp"
     android:paddingTop="5dp">
-
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:background="@color/whitefe"
-        android:padding="12dp">
+        android:paddingBottom="5dp"
+        android:layout_gravity="center_vertical"
+        android:paddingTop="5dp"
+        >
 
         <langteng.com.redpocketmoney.widget.CircleImageView
             android:id="@+id/user_icon"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_margin="5dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="12dp"
+            android:layout_centerVertical="true"
             android:src="@mipmap/ic_launcher"
              />
-
-
         <TextView
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
             android:layout_toRightOf="@+id/user_icon"
-            android:padding="5dp"
             android:text="user_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
             android:textColor="@color/black3"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/user_workname"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_alignParentBottom="true"
+            android:layout_below="@+id/user_name"
             android:layout_toRightOf="@+id/user_icon"
-            android:padding="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="3dp"
             android:text="user_workname"
             android:textColor="@color/black6"
             android:textSize="14sp" />
@@ -48,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
             android:src="@mipmap/next1" />
     </RelativeLayout>
 </LinearLayout>

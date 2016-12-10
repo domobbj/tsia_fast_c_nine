@@ -42,6 +42,9 @@
     <!--通知震动-->
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+
+
     <permission
         android:name="cn.bmob.permission.push"
         android:protectionLevel="normal"></permission>
@@ -66,9 +69,9 @@
         </activity>
 
 
-        <activity android:name=".widget.MainActivity"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            >
+        <activity
+            android:name=".widget.MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden">
 
         </activity>
 
@@ -91,6 +94,10 @@
         <activity
             android:name=".ui.personnal.ActivityWorker"
             android:windowSoftInputMode="stateHidden"></activity>
+
+        <activity android:name=".ui.search.SearchActivity"></activity>
+
+        <activity android:name=".ui.circle.ActivityCircleImageView"></activity>
 
         <!-- 百度移动统计 -->
 

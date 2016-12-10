@@ -78,6 +78,8 @@ public class MessageAdapter extends BaseAdapter {
             if (!StringUtil.isEmpty(articlesModels.get(position).iconUrl)) {
                 iconImg.setImageResource(
                         Integer.parseInt(articlesModels.get(position).iconUrl));
+            }else {
+                iconImg.setImageResource(R.mipmap.ic_launcher);
             }
         }
         return convertView;

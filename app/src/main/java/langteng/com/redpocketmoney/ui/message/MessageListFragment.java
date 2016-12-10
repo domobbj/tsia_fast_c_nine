@@ -113,7 +113,7 @@ public class MessageListFragment extends Fragment {
                 ActivityWorker.startActivityWorker(getActivity(), "PersonnalDetailFragment", "我", "");
             }
         });
-        messageEdt = (ClearEditText1) view.findViewById(R.id.message_edt);
+//        messageEdt = (ClearEditText1) view.findViewById(R.id.message_edt);
 
     }
 

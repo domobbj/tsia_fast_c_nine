@@ -6,13 +6,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
 
         <langteng.com.redpocketmoney.widget.CircleImageView
             android:id="@+id/icon_img"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_margin="12dp" />
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="6dp" />
 
         <TextView
             android:id="@+id/title_tv"
@@ -21,6 +26,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="3dp"
             android:layout_toRightOf="@+id/icon_img"
+            android:gravity="center_vertical"
             android:singleLine="true"
             android:text="title"
             android:textColor="@color/black3"
@@ -31,6 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
             android:src="@mipmap/next1" />
     </RelativeLayout>
 </LinearLayout>

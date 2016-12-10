@@ -6,16 +6,33 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/search_LL"
         android:layout_width="match_parent"
+        android:layout_height="55dp"
         android:background="@color/whitefe"
-        android:layout_height="55dp">
+        android:gravity="center">
 
-        <langteng.com.redpocketmoney.widget.ClearEditText1
+        <LinearLayout
+            android:id="@+id/search_ll"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/search_bg"
+            android:gravity="center"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/search"
+                android:drawablePadding="5dp"
+                android:text="搜索姓名  电话"
+                android:textSize="12sp"
+                android:textColor="@color/theme" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <ListView

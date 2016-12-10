@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <ScrollView
+        android:id="@+id/scroll_search"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@color/color_grey"
@@ -38,7 +39,8 @@
                         android:layout_height="wrap_content"
                         android:drawableLeft="@mipmap/search"
                         android:drawablePadding="5dp"
-                        android:text="搜素姓名  专属标签"
+                        android:text="搜索姓名  专属标签"
+                        android:textSize="12sp"
                         android:textColor="@color/theme" />
 
                 </LinearLayout>
@@ -66,13 +68,32 @@
                 android:scrollbars="none"></ListView>
 
             <TextView
+                android:id="@+id/common_question_tv"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_below="@+id/department_lv"
+                android:background="@color/color_grey"
+                android:gravity="center"
+                android:text="常见问题"
+                android:textColor="@color/theme" />
+
+            <ListView
+                android:id="@+id/common_question_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/hot_question_tv"
+                android:divider="@color/color_grey"
+                android:dividerHeight="0dp"
+                android:scrollbars="none"></ListView>
+
+            <TextView
                 android:id="@+id/hot_question_tv"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
                 android:layout_below="@+id/department_lv"
                 android:background="@color/color_grey"
                 android:gravity="center"
-                android:text="热门问题"
+                android:text="常见问题"
                 android:textColor="@color/theme" />
 
             <ListView

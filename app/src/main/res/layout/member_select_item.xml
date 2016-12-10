@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="38dp"
-    android:layout_height="38dp"
-    android:background="@color/color_grey">
+    android:layout_height="38dp">
 
     <RelativeLayout
         android:layout_width="38dp"
-        android:layout_height="38dp"
-        android:background="@color/whitefe">
+        android:layout_height="38dp">
 
         <langteng.com.redpocketmoney.widget.CircleImageView
             android:id="@+id/user_icon"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="5dp" />
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+         />
     </RelativeLayout>
 </LinearLayout>

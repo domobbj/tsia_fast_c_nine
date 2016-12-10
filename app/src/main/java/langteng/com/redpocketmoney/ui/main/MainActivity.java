@@ -44,6 +44,7 @@ public class MainActivity extends LibBaseActivity implements View.OnClickListene
     private TextView publishTv;
     private ViewPager viewPager;
     private TextView titleName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,11 +113,10 @@ public class MainActivity extends LibBaseActivity implements View.OnClickListene
         });
 
 
-
     }
 
-    private void initIM(){
-        _User user =  _User.getCurrentUser(this,_User.class);
+    private void initIM() {
+        _User user = _User.getCurrentUser(this, _User.class);
 //        BmobIMUserInfo userInfo = new BmobIMUserInfo();
 //        userInfo.setAvatar(user.userIcon);
 //        userInfo.setUserId(user.getObjectId());
@@ -126,8 +126,8 @@ public class MainActivity extends LibBaseActivity implements View.OnClickListene
             public void done(String uid, BmobException e) {
                 if (e == null) {
                     initIMLong();
-                    EventBus.getDefault().post(new EventCenter("BmobIMConnect",""));
-                    Logger.i("-----initIM----", "Succeed" );
+                    EventBus.getDefault().post(new EventCenter("BmobIMConnect", ""));
+                    Logger.i("-----initIM----", "Succeed");
                 } else {
                     Logger.i("-----initIM----", "e: " + e.getMessage() + e.getErrorCode());
                 }
@@ -138,7 +138,7 @@ public class MainActivity extends LibBaseActivity implements View.OnClickListene
     }
 
 
-    private void initIMLong(){
+    private void initIMLong() {
         BmobIM.getInstance().setOnConnectStatusChangeListener(new ConnectStatusChangeListener() {
             @Override
             public void onChange(ConnectionStatus connectionStatus) {
@@ -150,12 +150,11 @@ public class MainActivity extends LibBaseActivity implements View.OnClickListene
     }
 
 
-
     @Override
     protected void onResume() {
         super.onResume();
-        int count = (int)BmobIM.getInstance().getAllUnReadCount();
-        Logger.i("-----count--","count: " + count);
+        int count = (int) BmobIM.getInstance().getAllUnReadCount();
+        Logger.i("-----count--", "count: " + count);
     }
 
     @Override
@@ -181,7 +180,7 @@ public class MainActivity extends LibBaseActivity implements View.OnClickListene
                 viewPager.setCurrentItem(3);
                 break;
             case R.id.publish_tv:
-                ActivityCircle.startActivityWorker(this,"PublishCircleFragment");
+                ActivityCircle.startActivityWorker(this, "PublishCircleFragment");
                 break;
         }
     }
@@ -218,14 +217,14 @@ public class MainActivity extends LibBaseActivity implements View.OnClickListene
             dra.setBounds(0, 0, dra.getMinimumWidth(), dra.getMinimumHeight());
             emojiTv.setTextColor(getResources().getColor(R.color.theme));
             emojiTv.setCompoundDrawables(null, dra, null, null);
-            titleName.setText("发现同事");
+            titleName.setText("发现");
         } else if (pos == 2) {
             Drawable dra = getResources().getDrawable(R.mipmap.app_press);
             dra.setBounds(0, 0, dra.getMinimumWidth(), dra.getMinimumHeight());
             settingTv.setTextColor(getResources().getColor(R.color.theme));
             settingTv.setCompoundDrawables(null, dra, null, null);
             titleName.setText("应用");
-        }else if (pos == 3) {
+        } else if (pos == 3) {
             Drawable dra = getResources().getDrawable(R.mipmap.circle_press);
             dra.setBounds(0, 0, dra.getMinimumWidth(), dra.getMinimumHeight());
             circleTv.setTextColor(getResources().getColor(R.color.theme));
@@ -238,7 +237,7 @@ public class MainActivity extends LibBaseActivity implements View.OnClickListene
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void EventBus(EventCenter message) {
         if ("updateIcon".equals(message.opreatId)) {
-            _User user = _User.getCurrentUser(this,_User.class);
+            _User user = _User.getCurrentUser(this, _User.class);
 
         }
     }

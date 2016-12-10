@@ -1,4 +1,4 @@
-package langteng.com.baselib.widget;
+package langteng.com.redpocketmoney.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;

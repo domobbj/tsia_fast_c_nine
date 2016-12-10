@@ -52,7 +52,7 @@ public class TaskActivity extends LibBaseActivity {
             MineTaskListFragment testFragment = new MineTaskListFragment();
             transacction.replace(R.id.fragment, testFragment);
 //            rightTv.setBackgroundResource(R.mipmap.chuangjian);
-            rightTv.setTextSize(45);
+            rightTv.setTextSize(25);
             setRightTv(true, "+", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -25,6 +25,7 @@ import cn.bmob.v3.listener.UpdateListener;
 import cn.bmob.v3.listener.UploadBatchListener;
 import langteng.com.baselib.GlobalApplication;
 import langteng.com.baselib.utils.Logger;
+import langteng.com.baselib.utils.StringUtil;
 import langteng.com.redpocketmoney.ProgrammingApplication;
 import langteng.com.redpocketmoney.R;
 import langteng.com.redpocketmoney.eventbus.EventCenter;
@@ -79,7 +80,6 @@ public class PersonnalDetailFragment extends Fragment {
         });
 
 
-
         userTag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,7 +122,7 @@ public class PersonnalDetailFragment extends Fragment {
                 final String[] filePaths = new String[1];
                 filePaths[0] = photos.get(0);
                 final _User user = ProgrammingApplication.get().getUser();
-                user.iconFile.uploadBatch(getActivity(),filePaths, new UploadBatchListener() {
+                user.iconFile.uploadBatch(getActivity(), filePaths, new UploadBatchListener() {
                     @Override
                     public void onSuccess(List<BmobFile> files, List<String> urls) {
                         //1、files-上传完成后的BmobFile集合，是为了方便大家对其上传后的数据进行操作，例如你可以将该文件保存到表中
@@ -138,7 +138,7 @@ public class PersonnalDetailFragment extends Fragment {
                                             .asBitmap()
                                             .placeholder(R.mipmap.defalut_icon)
                                             .into(userIcon);
-                                    EventBus.getDefault().post(new EventCenter("updateIcon",""));
+                                    EventBus.getDefault().post(new EventCenter("updateIcon", ""));
                                 }
 
                                 @Override
@@ -180,16 +180,23 @@ public class PersonnalDetailFragment extends Fragment {
         userName.setText(user.userNickName);
         userWork.setText(user.userWork);
         userMob.setText("联系电话： " + user.getMobilePhoneNumber() + "");
-        userEmail.setText("邮箱： " + user.getEmail());
-        StringBuffer buffer = new StringBuffer();
-        for (int i = 0; i < user.userTag.split(",").length; i++) {
-            if (i!=0) {
-                buffer.append(user.userTag.split(",")[i] + "  ");
-            }else {
-                buffer.append(user.userTag.split(",")[i] + "  ");
-            }
+        if (!StringUtil.isEmpty(user.getEmail())) {
+            userEmail.setText("邮箱： " + user.getEmail());
+        } else {
+            userEmail.setText("邮箱：mail@domob.cn ");
         }
-        userTag.setText("专属标签： " + user.userTag);
+        StringBuffer buffer = new StringBuffer();
+        if (!StringUtil.isEmpty(user.userTag)) {
+            for (int i = 0; i < user.userTag.split(",").length; i++) {
+                if (i != 0) {
+                    buffer.append(user.userTag.split(",")[i] + "  ");
+                } else {
+                    buffer.append(user.userTag.split(",")[i] + "  ");
+                }
+            }
+            userTag.setText("专属标签： " + user.userTag);
+        }
+
     }
 
 

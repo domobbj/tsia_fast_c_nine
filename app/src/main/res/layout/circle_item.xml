@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:background="@color/whitefe"
     android:paddingBottom="5dp"
-
     android:paddingTop="8dp">
 
     <RelativeLayout
@@ -31,8 +30,8 @@
             android:paddingRight="10dp"
             android:paddingTop="5dp"
             android:text="Tag"
-            android:textSize="11sp"
-            android:textColor="@color/whitefe" />
+            android:textColor="@color/whitefe"
+            android:textSize="11sp" />
 
 
         <TextView
@@ -40,7 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/user_icon"
-            android:padding="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
             android:text="姓名" />
 
 
@@ -50,12 +50,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/user_name"
-            android:layout_marginBottom="@dimen/padding20"
-            android:layout_marginTop="@dimen/padding10"
+            android:layout_marginBottom="@dimen/padding10"
             android:layout_toRightOf="@+id/user_icon"
             android:orientation="vertical"
             android:paddingLeft="@dimen/padding10"
-            android:paddingRight="@dimen/padding10"
+            android:paddingRight="12dp"
             expandableTextView:animDuration="200"
             expandableTextView:maxCollapsedLines="3">
 
@@ -63,8 +62,6 @@
                 android:id="@id/expandable_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
                 android:maxLines="2"
                 android:textColor="#8C8C8C"
                 android:textSize="16sp" />
@@ -74,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|bottom"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:background="@android:color/transparent"
                 android:text="展开全文"
                 android:textColor="@color/theme" />
@@ -85,15 +82,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/expand_text_view"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="12dp"
             android:layout_toRightOf="@+id/user_icon"
-            android:horizontalSpacing="12dp"
+            android:horizontalSpacing="8dp"
             android:numColumns="2"
-            android:verticalSpacing="12dp"></langteng.com.redpocketmoney.widget.NoScrollGridView>
+            android:verticalSpacing="8dp"></langteng.com.redpocketmoney.widget.NoScrollGridView>
 
 
         <RelativeLayout
+            android:id="@+id/time_rl"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="28dp"
             android:layout_below="@+id/gridview_img"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/user_icon"
@@ -104,10 +104,21 @@
             <TextView
                 android:id="@+id/circle_time"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="20dp"
                 android:layout_centerVertical="true"
-                android:gravity="center_horizontal"
+                android:gravity="center_vertical"
                 android:text="time" />
+
+            <TextView
+                android:id="@+id/prase_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/pinglun"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:text="评论" />
 
             <TextView
                 android:id="@+id/comment"
@@ -120,18 +131,14 @@
                 android:drawablePadding="5dp"
                 android:gravity="center_vertical"
                 android:text="评论" />
-
-            <TextView
-                android:id="@+id/prase_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:drawableLeft="@mipmap/pinglun"
-                android:drawablePadding="5dp"
-                android:gravity="center_vertical"
-                android:text="评论" />
         </RelativeLayout>
 
+        <MyL
+            android:id="@+id/comment_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/user_icon"
+            android:layout_marginLeft="12dp"
+            android:layout_below="@+id/time_rl"></MyL>
     </RelativeLayout>
 </LinearLayout>

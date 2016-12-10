@@ -7,11 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-
 import java.util.List;
 
-import langteng.com.baselib.GlobalApplication;
 import langteng.com.baselib.utils.ViewHolderUtils;
 import langteng.com.redpocketmoney.R;
 import langteng.com.redpocketmoney.widget.CircleImageView;
@@ -55,11 +52,12 @@ public class DepartmentAdapter extends BaseAdapter {
         TextView titleTV = ViewHolderUtils.getViewHolderView(convertView, R.id.title_tv);
 
         CircleImageView icon = ViewHolderUtils.getViewHolderView(convertView, R.id.icon_img);
-        Glide.with(GlobalApplication.getInstance())
-                .load(articlesModels.get(position).iconUrl)
-                .asBitmap()
-                .placeholder(R.mipmap.defalut_icon)
-                .into(icon);
+//        Glide.with(GlobalApplication.getInstance())
+//                .load(articlesModels.get(position).iconUrl)
+//                .asBitmap()
+//                .placeholder(R.mipmap.defalut_icon)
+//                .into(icon);
+        icon.setImageResource(Integer.parseInt(articlesModels.get(position).iconUrl));
         titleTV.setText(articlesModels.get(position).departmentName);
 
 

@@ -56,15 +56,13 @@ public class WorkerListAdapter extends BaseAdapter {
         TextView userName = ViewHolderUtils.getViewHolderView(convertView, R.id.user_name);
         TextView workName = ViewHolderUtils.getViewHolderView(convertView, R.id.user_workname);
         CircleImageView userIcon = ViewHolderUtils.getViewHolderView(convertView, R.id.user_icon);
-        userName.setText("姓名：" +articlesModels.get(position).userNickName);
+        userName.setText(articlesModels.get(position).userNickName);
         workName.setText("职位：" +articlesModels.get(position).userWork);
         Glide.with(GlobalApplication.getInstance())
                 .load(articlesModels.get(position).userIcon)
                 .asBitmap()
                 .placeholder(R.mipmap.defalut_icon)
                 .into(userIcon);
-
-
         return convertView;
     }
 
