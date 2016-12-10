@@ -22,7 +22,6 @@ class DatabaseProcessor {
         _config = config;
         try {
             conn = getConnection();
-            st = conn.createStatement();
         } catch (SQLException e) {
             _log.error(e.getMessage());
         }
@@ -56,8 +55,10 @@ class DatabaseProcessor {
                     Utils.getDt(),
                     Utils.getHr()
             );
+            st = conn.createStatement();
             int num = st.executeUpdate(sql);
             _log.info("insert into hot_select " + num + " records.");
+            st.close();
             return true;
         } catch (SQLException e) {
             _log.error(e.getMessage());
