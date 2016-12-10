@@ -3,9 +3,9 @@
     android:id="@+id/mScrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/bg"
     android:fadingEdge="none"
     android:fillViewport="true"
-    android:background="@mipmap/bg"
     android:scrollbars="none">
 
     <RelativeLayout
@@ -32,8 +32,10 @@
             android:layout_width="fill_parent"
             android:layout_height="55dp"
             android:layout_below="@+id/civ_user_icon"
+            android:background="@drawable/bn_login"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -42,15 +44,14 @@
 
             <EditText
                 android:id="@+id/ev_account"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                style="@style/edittext_style"
                 android:layout_marginLeft="10dp"
                 android:drawablePadding="16dip"
                 android:hint="@string/str_input_login_account"
                 android:paddingLeft="10dp"
                 android:singleLine="true"
-                android:textColor="@color/whitefe"
-                android:textColorHint="@color/whitefe"
+                android:textColor="@color/theme"
+                android:textColorHint="@color/theme"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -59,8 +60,11 @@
             android:layout_width="fill_parent"
             android:layout_height="55dp"
             android:layout_below="@+id/ll1"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bn_login"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="10dp">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -69,8 +73,7 @@
 
             <EditText
                 android:id="@+id/ev_password"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                style="@style/edittext_style"
                 android:layout_below="@+id/view"
                 android:layout_marginLeft="10dp"
                 android:drawablePadding="16dp"
@@ -78,8 +81,8 @@
                 android:inputType="textPassword"
                 android:maxLength="20"
                 android:singleLine="true"
-                android:textColor="@color/whitefe"
-                android:textColorHint="@color/whitefe"
+                android:textColor="@color/theme"
+                android:textColorHint="@color/theme"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -94,9 +97,9 @@
             android:gravity="center"
             android:padding="6dp"
             android:text="@string/str_login_forget"
-            android:visibility="gone"
             android:textColor="@color/bn_forget_pwd"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:visibility="gone" />
 
         <ImageButton
             android:id="@+id/btn_login"
@@ -105,8 +108,7 @@
             android:layout_below="@+id/ll2"
             android:layout_marginBottom="12dp"
             android:layout_marginTop="20dp"
-            android:background="@mipmap/btn"
-             />
+            android:background="@mipmap/btn" />
 
     </RelativeLayout>
 </ScrollView>

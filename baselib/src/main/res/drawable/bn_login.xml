@@ -3,28 +3,28 @@
     <item android:state_pressed="true">
         <shape>
             <corners android:radius="10px" />
-            <solid android:color="@color/color_grey" />
+            <solid android:color="@color/white" />
         </shape>
     </item>
 
     <item android:state_pressed="false">
         <shape>
             <corners android:radius="10px" />
-            <solid android:color="@color/color_grey" />
+            <solid android:color="@color/white" />
         </shape>
     </item>
 
     <item android:state_enabled="false">
         <shape>
             <corners android:radius="10px" />
-            <solid android:color="@color/color_grey" />
+            <solid android:color="@color/white" />
         </shape>
     </item>
 
     <item android:state_enabled="true">
         <shape>
             <corners android:radius="10px" />
-            <solid android:color="@color/color_grey" />
+            <solid android:color="@color/white" />
         </shape>
     </item>
 

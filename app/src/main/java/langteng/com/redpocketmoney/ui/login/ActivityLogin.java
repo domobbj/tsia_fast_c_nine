@@ -61,12 +61,14 @@ public class ActivityLogin extends LibBaseActivity implements View.OnClickListen
                     showToast("请输入密码");
                     return;
                 }
+                showDialog("");
                 _User userModel = new _User();
                 userModel.setUsername(name);
                 userModel.setPassword(pw);
                 userModel.login(ActivityLogin.this, new SaveListener() {
                     @Override
                     public void onSuccess() {
+                        hiddenDialog();
                             showToast("登陆成功");
                             SPUtil.setString1("userid", name);
                             ActivityJump.getInsanceJump(ActivityLogin.this, MainActivity.class, null, true);
@@ -74,7 +76,7 @@ public class ActivityLogin extends LibBaseActivity implements View.OnClickListen
 
                     @Override
                     public void onFailure(int i, String s) {
-
+                        hiddenDialog();
                     }
                 });
                 Tools.hideSoftInputFromWindow(this, passwordEdt);
