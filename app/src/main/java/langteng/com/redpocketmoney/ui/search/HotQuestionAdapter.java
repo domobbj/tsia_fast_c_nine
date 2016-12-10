@@ -7,8 +7,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
+import langteng.com.baselib.GlobalApplication;
+import langteng.com.baselib.utils.StringUtil;
 import langteng.com.baselib.utils.ViewHolderUtils;
 import langteng.com.redpocketmoney.R;
 import langteng.com.redpocketmoney.widget.CircleImageView;
@@ -53,12 +57,15 @@ public class HotQuestionAdapter extends BaseAdapter {
         titleTV.setText(hotQUestionModelList.get(position).questionName);
 
         CircleImageView icon = ViewHolderUtils.getViewHolderView(convertView, R.id.icon_img);
-//        Glide.with(GlobalApplication.getInstance())
-//                .load(hotQUestionModelList.get(position).iconUrl)
-//                .asBitmap()
-//                .placeholder(R.mipmap.defalut_icon)
-//                .into(icon);
-        icon.setImageResource(Integer.parseInt(hotQUestionModelList.get(position).iconUrl));
+        if (StringUtil.isInteger(hotQUestionModelList.get(position).iconUrl)) {
+            icon.setImageResource(Integer.parseInt(hotQUestionModelList.get(position).iconUrl));
+        } else {
+            Glide.with(GlobalApplication.getInstance())
+                    .load(hotQUestionModelList.get(position).iconUrl)
+                    .asBitmap()
+                    .placeholder(R.mipmap.ic_launcher)
+                    .into(icon);
+        }
         return convertView;
     }
 

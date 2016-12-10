@@ -24,6 +24,7 @@ import cn.bmob.newim.BmobIM;
 import cn.bmob.newim.bean.BmobIMConversation;
 import cn.bmob.newim.bean.BmobIMMessage;
 import cn.bmob.newim.bean.BmobIMUserInfo;
+import cn.bmob.newim.core.BmobIMClient;
 import cn.bmob.newim.listener.ConversationListener;
 import cn.bmob.v3.exception.BmobException;
 import langteng.com.baselib.GlobalApplication;
@@ -76,26 +77,35 @@ public class MessageListFragment extends Fragment {
         msgLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                BmobIMUserInfo info = new BmobIMUserInfo();
-                info.setName("1111");
-                info.setUserId("1111");
-                BmobIM.getInstance().startPrivateConversation(info,
-                        new ConversationListener() {
-                            @Override
-                            public void done(BmobIMConversation c, BmobException e) {
-                                if (e == null) {
-                                    //在此跳转到聊天页面
-                                    Intent intent = new Intent(getActivity(), ChatActivity.class);
-                                    Logger.i("----c--", " " + c.getId() + "  getConversationIcon: " + c.getConversationIcon());
-                                    intent.putExtra("c", c);
-                                    startActivity(intent);
-                                } else {
-                                    Logger.i("------startPrivateConversation--", "---e--" +
-                                            e.getMessage() + " " + e.getErrorCode());
+                if (position == 0) {
+                    ActivityWorker.startActivityWorker(getActivity(),
+                            "NoticeListFragment", "通知", "");
+                } else if (position == 1) {
+                    ActivityWorker.startActivityWorker(getActivity(),
+                            "NoticeListFragment", "通知", "");
+                } else {
+                    BmobIMClient client = (BmobIMClient) modelList.get(position).object;
+                    BmobIMUserInfo info = new BmobIMUserInfo();
+                    info.setName(client.getCurrentUid());
+                    info.setUserId(client.getCurrentUid());
+                    BmobIM.getInstance().startPrivateConversation(info,
+                            new ConversationListener() {
+                                @Override
+                                public void done(BmobIMConversation c, BmobException e) {
+                                    if (e == null) {
+                                        //在此跳转到聊天页面
+                                        Intent intent = new Intent(getActivity(), ChatActivity.class);
+                                        Logger.i("----c--", " " + c.getId() + "  getConversationIcon: " + c.getConversationIcon());
+                                        intent.putExtra("c", c);
+                                        startActivity(intent);
+                                    } else {
+                                        Logger.i("------startPrivateConversation--", "---e--" +
+                                                e.getMessage() + " " + e.getErrorCode());
+                                    }
                                 }
-                            }
-                        });
+                            });
+                }
+
             }
         });
 
@@ -186,14 +196,14 @@ public class MessageListFragment extends Fragment {
         messageListModel.title = "通知";
         messageListModel.hint = "未读通知";
         messageListModel.object = "messageListModel";
-        messageListModel.iconUrl = R.mipmap.ic_launcher + "";
+        messageListModel.iconUrl = R.mipmap.notice_icon + "";
         modelList.add(messageListModel);
 
         MessageListModel messageListModel1 = new MessageListModel();
         messageListModel1.title = "小助理";
         messageListModel1.hint = "您被分配了一个新任务";
         messageListModel1.object = "messageListModel";
-        messageListModel1.iconUrl = R.mipmap.ic_launcher + "";
+        messageListModel1.iconUrl = R.mipmap.xiaozhuli + "";
         modelList.add(messageListModel1);
     }
 

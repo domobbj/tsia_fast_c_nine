@@ -11,10 +11,11 @@
         android:fillViewport="true"
         android:scrollbars="none">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:divider="@color/color_grey">
+            android:divider="@color/color_grey"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/search_LL"
@@ -40,8 +41,8 @@
                         android:drawableLeft="@mipmap/search"
                         android:drawablePadding="5dp"
                         android:text="搜索姓名  专属标签"
-                        android:textSize="12sp"
-                        android:textColor="@color/theme" />
+                        android:textColor="@color/theme"
+                        android:textSize="12sp" />
 
                 </LinearLayout>
 
@@ -61,7 +62,7 @@
             <ListView
                 android:id="@+id/department_lv"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/department_tv"
                 android:divider="@color/color_grey"
                 android:dividerHeight="0dp"
@@ -80,7 +81,7 @@
             <ListView
                 android:id="@+id/common_question_lv"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/hot_question_tv"
                 android:divider="@color/color_grey"
                 android:dividerHeight="0dp"
@@ -90,20 +91,20 @@
                 android:id="@+id/hot_question_tv"
                 android:layout_width="match_parent"
                 android:layout_height="42dp"
-                android:layout_below="@+id/department_lv"
+                android:layout_below="@+id/common_question_lv"
                 android:background="@color/color_grey"
                 android:gravity="center"
-                android:text="常见问题"
+                android:text="热门问题"
                 android:textColor="@color/theme" />
 
             <ListView
                 android:id="@+id/hot_question_lv"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/hot_question_tv"
                 android:divider="@color/color_grey"
                 android:dividerHeight="0dp"
                 android:scrollbars="none"></ListView>
-        </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>

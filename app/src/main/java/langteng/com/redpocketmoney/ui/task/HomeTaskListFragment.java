@@ -15,8 +15,6 @@ import java.util.List;
 import langteng.com.redpocketmoney.R;
 import langteng.com.redpocketmoney.ui.personnal.ActivityWorker;
 import langteng.com.redpocketmoney.ui.task.adapter.HomeTaskListAdapter;
-import langteng.com.redpocketmoney.ui.task.TaskActivity;
-import langteng.com.redpocketmoney.ui.task.TaskModel;
 
 /**
  * Created by lang on 16/11/17.
@@ -57,9 +55,13 @@ public class HomeTaskListFragment extends Fragment {
                             "WebviewFragment","会议室预定",
                             "http://www.bluefocusmix.com/parts.php?mod=meetingroom");
                 }else if (position==2){
-
+                    ActivityWorker.startActivityWorker(getActivity(),
+                            "WebviewFragment","员工投票",
+                            "https://www.wenjuan.com/s/3A3emu/");
                 }else if (position==3){
-
+                    ActivityWorker.startActivityWorker(getActivity(),
+                            "WebviewFragment","菜谱预告",
+                            "http://h5.dbbar.net/caipu1");
                 }
 
             }
@@ -88,8 +90,8 @@ public class HomeTaskListFragment extends Fragment {
         taskModelList.add(model);
 
         model = new TaskModel();
-        model.title = "资料下载";
-        model.content = "最新资料，尽在手中";
+        model.title = "员工投票";
+        model.content = "全民公投 即得结果";
         model.iconurl = R.mipmap.data_icon+"";
         taskModelList.add(model);
 

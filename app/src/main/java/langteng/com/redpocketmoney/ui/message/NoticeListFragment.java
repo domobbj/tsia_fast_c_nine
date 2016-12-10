@@ -30,7 +30,7 @@ public class NoticeListFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view1 = inflater.inflate(R.layout.fragment_message, null);
+        View view1 = inflater.inflate(R.layout.fragment_notice, null);
         initView(view1);
         return view1;
     }

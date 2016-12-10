@@ -5,6 +5,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ import langteng.com.baselib.baseui.LibBaseActivity;
 import langteng.com.baselib.utils.Logger;
 import langteng.com.baselib.utils.Tools;
 import langteng.com.redpocketmoney.R;
+import langteng.com.redpocketmoney.ui.personnal.ActivityWorker;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -65,6 +67,16 @@ public class SearchActivity extends LibBaseActivity {
         });
         adapter = new SearchQuestionAdapter(this, docsBeanList);
         searchLv = (ListView) findViewById(R.id.search_lv);
+        searchLv.setAdapter(adapter);
+        searchLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ActivityWorker.startActivityWorker(SearchActivity.this,
+                        "WorkerListFragment"
+                        , "员工名片",
+                        docsBeanList.get(position).id + "");
+            }
+        });
         findViewById(R.id.search_cancle).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,6 +119,9 @@ public class SearchActivity extends LibBaseActivity {
                 docsBeanList.clear();
                 if (model.response != null && model.response.docs != null) {
                     docsBeanList.addAll(model.response.docs);
+                    Logger.i("----strResult--", "strResult:" + model.response.docs.size());
+                } else {
+                    Logger.i("----strResult--", "strResult:  null ");
                 }
                 runOnUiThread(new Runnable() {
                     @Override
@@ -114,7 +129,6 @@ public class SearchActivity extends LibBaseActivity {
                         adapter.notifyDataSetChanged();
                     }
                 });
-                Logger.i("----strResult--", "strResult:" + strResult);
             } else {
             }
         } catch (ClientProtocolException e) {
