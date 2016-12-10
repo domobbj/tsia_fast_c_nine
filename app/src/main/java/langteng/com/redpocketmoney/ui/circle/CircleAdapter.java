@@ -19,6 +19,7 @@ import langteng.com.baselib.utils.ViewHolderUtils;
 import langteng.com.redpocketmoney.R;
 import langteng.com.redpocketmoney.widget.CircleImageView;
 import langteng.com.redpocketmoney.widget.ExpandableTextView;
+import langteng.com.redpocketmoney.widget.MyListView;
 import langteng.com.redpocketmoney.widget.NoScrollGridView;
 
 
@@ -64,6 +65,9 @@ public class CircleAdapter extends BaseAdapter {
         TextView praiseTimes = ViewHolderUtils.getViewHolderView(convertView, R.id.prase_tv);
 
         TextView commentTv = ViewHolderUtils.getViewHolderView(convertView, R.id.comment);
+
+        MyListView commentLv = ViewHolderUtils.getViewHolderView(convertView, R.id.comment_lv);
+
 
         final ExpandableTextView expandableTextView = ViewHolderUtils.getViewHolderView(convertView,
                 R.id.expand_text_view);

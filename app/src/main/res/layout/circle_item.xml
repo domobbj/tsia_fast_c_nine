@@ -133,12 +133,12 @@
                 android:text="评论" />
         </RelativeLayout>
 
-        <MyL
+        <langteng.com.redpocketmoney.widget.MyListView
             android:id="@+id/comment_lv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/user_icon"
             android:layout_marginLeft="12dp"
-            android:layout_below="@+id/time_rl"></MyL>
+            android:layout_below="@+id/time_rl"></langteng.com.redpocketmoney.widget.MyListView>
     </RelativeLayout>
 </LinearLayout>

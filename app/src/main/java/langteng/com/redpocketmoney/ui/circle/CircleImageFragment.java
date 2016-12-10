@@ -8,16 +8,16 @@ import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
 
+import it.sephiroth.android.library.imagezoom.ImageViewTouch;
 import langteng.com.baselib.GlobalApplication;
 import langteng.com.baselib.baseui.LibBaseFragment;
 import langteng.com.redpocketmoney.R;
-import langteng.com.redpocketmoney.widget.MyZoomImageView;
 
 /**
  */
 public class CircleImageFragment extends LibBaseFragment  {
 
-    private MyZoomImageView myZoomImageView;
+    private ImageViewTouch myZoomImageView;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class CircleImageFragment extends LibBaseFragment  {
     }
 
     private void initView(View view) {
-        myZoomImageView = (MyZoomImageView) view.findViewById(R.id.circle_img);
+        myZoomImageView = (ImageViewTouch) view.findViewById(R.id.circle_img);
         Glide.with(GlobalApplication.getInstance())
                 .load(imgUrl)
                 .asBitmap()

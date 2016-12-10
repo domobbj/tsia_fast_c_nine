@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_navigate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitefe"
+    android:orientation="vertical">
+
+    <langteng.com.redpocketmoney.widget.ClearEditText1
+        android:id="@+id/search_edt"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@+id/search_cancle"
+        android:background="@drawable/bn_login"
+        android:drawableLeft="@mipmap/search"
+        android:drawablePadding="5dp"
+        android:paddingLeft="15dp" />
+
+    <TextView
+        android:id="@+id/search_cancle"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:gravity="center_vertical"
+        android:text="取消"
+        android:textColor="@color/theme"
+        android:textSize="16sp"
+        />
+
+    <ListView
+        android:id="@+id/search_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_edt"></ListView>
+
+</RelativeLayout>

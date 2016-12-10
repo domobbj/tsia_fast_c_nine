@@ -8,8 +8,9 @@
         android:id="@+id/img_pos"
         android:layout_width="match_parent"
         android:layout_height="42dp"
-        android:textColor="@color/whitefe"
-        android:gravity="center" />
+        android:background="@color/theme"
+        android:gravity="center"
+        android:textColor="@color/whitefe" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/img_viewpager"

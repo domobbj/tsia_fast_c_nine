@@ -3,11 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <langteng.com.redpocketmoney.widget.MyZoomImageView
+    <it.sephiroth.android.library.imagezoom.ImageViewTouch
         android:id="@+id/circle_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-         />
-
+        />
 
 </LinearLayout>
